@@ -536,7 +536,6 @@ body.lock {
 
 .rev__container {
   position: relative;
-  overflow: hidden;
   padding: 0px 0px 100px 0px;
 }
 
@@ -546,7 +545,7 @@ body.lock {
 }
 
 .rev__slider {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0px auto;
   position: relative;
 }
@@ -622,6 +621,13 @@ body.lock {
 }
 
 .date__time {
+  letter-spacing: 9.6px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 23px 38px;
+  font-size: 2.4rem;
+  border-radius: 15px;
+  border: 1px solid #151515;
   margin: 0px 0px 40px 0px;
 }
 
@@ -975,6 +981,13 @@ body.lock {
   }
 
   .date__title {
+    text-align: center;
+  }
+
+  .date__time {
+    padding: 20px;
+    font-size: 2rem;
+    letter-spacing: 7.6px;
     text-align: center;
   }
 
