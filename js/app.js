@@ -1,5 +1,5 @@
 
-// Dynamic Adapt v.1
+// // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
 // e.x. data-da="item,2,992"
 // Andrikanych Yevhen 2020
@@ -143,6 +143,7 @@ var swiper = new Swiper('.rev__slider', {
 	slidesPerView: 1,
 	slidesPerGroup: 1,
 	spaceBetween: 100,
+
 	speed: 1000,
 	navigation: {
 		nextEl: '.rev__slider-next',
@@ -152,6 +153,7 @@ var swiper = new Swiper('.rev__slider', {
 
 		768: {
 			slidesPerView: 2,
+
 			spaceBetween: 70,
 			slidesPerGroup: 1,
 		},
@@ -163,9 +165,137 @@ var swiper = new Swiper('.rev__slider', {
 
 //////SLIDER///////////////
 
+let header = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".header",   // pin the trigger element while active
+		start: "top center",
+
+	}
+});
+if (window.innerWidth > 737) {
+
+	header
+
+		.from(".header__time", { duration: 0.7, ease: "power4.out", opacity: 0, x: -100 }, "+=0.2")
+		.from(".header__title", { duration: 0.7, ease: "power4.out", opacity: 0, x: -100 }, "-=0.4")
+		.from(".header__text", { duration: 0.7, ease: "power4.out", opacity: 0, x: -100 }, "-=0.4")
+		.from(".header__btn", { duration: 0.7, ease: "power4.out", opacity: 0, x: -100 }, "-=0.4")
+
+} else {
+	header
+
+		.from(".header__time", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "+=0.2")
+		.from(".header__title", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "-=0.4")
+		.from(".header__text", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "-=0.4")
+		.from(".header__btn", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "-=0.4")
+
+}
+
+let know = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".know",   // pin the trigger element while active
+		start: "top center",
+
+
+	}
+});
+if (window.innerWidth > 737) {
+
+	know
+		.from(".know__img", { duration: 1.2, ease: "power4.out", opacity: 0, x: -100 }, "+=0.2")
+		.from(".know__title", { duration: 0.7, ease: "power4.out", opacity: 0, x: -100 }, "-=0.6")
+		.from(".know__text-item", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100, stagger: .3 }, "-=0.4")
+
+
+} else {
+	know
+
+		.from(".know__title", { duration: 0.7, ease: "power4.out", opacity: 0, y: 50 }, "+=0.2")
+		.from(".know__img", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "-=0.4")
+		.from(".know__text-item", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50, stagger: .3 }, "-=0.6")
+
+}
 
 
 
+let cases = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".cases",   // pin the trigger element while active
+		start: "top center",
+
+
+	}
+});
+if (window.innerWidth > 737) {
+
+	cases
+		.from(".cases__title", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100 }, "+=0.2")
+		.from(".cases__img", { duration: 1, ease: "power4.out", opacity: 0, x: -100 }, "-=0.6")
+		.from(".cases__text-item", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100, stagger: .3 }, "-=0.4")
+
+
+} else {
+	cases
+		.from(".cases__title", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "+=0.2")
+		.from(".cases__img", { duration: 0.7, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
+		.from(".cases__text-item", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50, stagger: .3 }, "-=0.4")
+
+}
+
+
+
+let speakers = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".speakers",   // pin the trigger element while active
+		start: "top center",
+
+
+	}
+});
+if (window.innerWidth > 737) {
+
+	speakers
+		.from(".speakers__title", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100 }, "+=0.2")
+		.from(".speakers__img", { duration: 1, ease: "power4.out", opacity: 0, x: -100, stagger: .3 }, "-=0.6")
+		.from(".speakers__text-item", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100, stagger: .3 }, "-=0.4")
+
+
+} else {
+	speakers
+		.from(".speakers__title", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "+=0.2")
+		.from(".speakers__img", { duration: 1, ease: "power4.out", opacity: 0, y: 50, stagger: .3 }, "-=0.6")
+		.from(".speakers__text-item", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50, stagger: .3 }, "-=0.4")
+
+}
+
+
+
+let date = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".date",   // pin the trigger element while active
+		start: "top center",
+
+
+	}
+});
+if (window.innerWidth > 737) {
+
+	date
+
+		.from(".date__title", { duration: 1, ease: "power4.out", opacity: 0, x: -100 }, "+=0.2")
+		.from(".date__time", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100 }, "-=0.6")
+		.from(".date__text", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100, stagger: .3 }, "-=0.4")
+		.from(".date__btn", { duration: 0.8, ease: "power4.out", opacity: 0, x: -100 }, "-=0.4")
+
+
+} else {
+	date
+		.from(".date__title", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "+=0.2")
+		.from(".date__time", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
+		.from(".date__img", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
+		.from(".date__text", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50, stagger: .3 }, "-=0.4")
+		.from(".date__btn", { duration: 0.8, ease: "power4.out", opacity: 0, y: 50 }, "-=0.4")
+}
 
 
 
